@@ -1,161 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J-VIBE Guide Mobile Top Page Mockup</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1a1a2e; /* Dark theme background */
-            color: #f0f0f0; /* Light text */
-        }
-        .accent-cyan {
-            color: #00e0e0; /* Deep Cyan - New Accent Color */
-        }
-        .tag-accent {
-            background-color: #00e0e0;
-            color: #1a1a2e;
-        }
-        .artist-card-slider {
-            /* スライダーのラッパー */
-            background-color: #2a2a4a; /* カード背景色 */
-            border-left: 4px solid #00e0e0; /* アクセントカラー */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-            transition: transform 0.2s;
-        }
-        /* 横スクロールバーを非表示にする (モバイル向け) */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none; /* IE and Edge */
-            scrollbar-width: none; /* Firefox */
-        }
-    </style>
-</head>
-<body class="min-h-screen">
+---
+layout: default
+---
 
-    <div id="app" class="max-w-xl mx-auto">
-        
-        <!-- A. ヘッダー (ロゴと言語セレクター) -->
-        <header class="flex justify-between items-center px-4 py-3 bg-[#1a1a2e] sticky top-0 z-10 border-b border-gray-800">
-            <h1 class="text-xl font-extrabold tracking-tight">
-                <a href="#" class="text-white">
-                    <i class="fas fa-headphones accent-cyan mr-2"></i> J-VIBE<span class="accent-cyan">.guide</span>
-                </a>
-            </h1>
-            <!-- 言語セレクター (視覚的バランス調整済み) -->
-            <div class="text-xs space-x-2">
-                <span class="accent-cyan cursor-pointer font-bold underline">EN</span>
-                <span class="text-gray-400 cursor-pointer hover:text-white" style="font-size: 0.75rem;">한국어</span>
-                <span class="text-gray-400 cursor-pointer hover:text-white" style="font-size: 0.75rem;">繁體</span>
-            </div>
-        </header>
-        
-        <!-- B. ヒーロー画像 (トップのビジュアル) -->
-        <div class="w-full">
-            <!-- 高さをh-56からh-32に変更 -->
-            <img src="https://placehold.co/600x256/111111/ffffff?text=Japanese+Live+Music+Scene" alt="Japanese Live Music Scene Hero Image" 
-                 class="w-full h-32 object-cover opacity-70">
+<style>
+    /* ページのカスタムスタイル (Top Page Specific Styles) */
+    .accent-cyan {
+        color: #00e0e0; /* Deep Cyan - New Accent Color */
+    }
+    .tag-accent {
+        background-color: #00e0e0;
+        color: #1a1a2e;
+    }
+    .artist-card-slider {
+        /* スライダーのラッパー */
+        background-color: #2a2a4a; /* カード背景色 */
+        border-left: 4px solid #00e0e0; /* アクセントカラー */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        transition: transform 0.2s;
+    }
+    /* 横スクロールバーを非表示にする (モバイル向け) */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+</style>
+
+<div id="app" class="max-w-xl mx-auto">
+    
+    <!-- A. ヘッダー (ロゴと言語セレクター) -->
+    <header class="flex justify-between items-center px-4 py-3 bg-[#1a1a2e] sticky top-0 z-10 border-b border-gray-800">
+        <h1 class="text-xl font-extrabold tracking-tight">
+            <a href="#" class="text-white">
+                <i class="fas fa-headphones accent-cyan mr-2"></i> J-VIBE<span class="accent-cyan">.guide</span>
+            </a>
+        </h1>
+        <!-- 言語セレクター (視覚的バランス調整済み) -->
+        <div class="text-xs space-x-2">
+            <span class="accent-cyan cursor-pointer font-bold underline">EN</span>
+            <span class="text-gray-400 cursor-pointer hover:text-white" style="font-size: 0.75rem;">한국어</span>
+            <span class="text-gray-400 cursor-pointer hover:text-white" style="font-size: 0.75rem;">繁體</span>
         </div>
-
-        <main class="p-4">
-            
-            <!-- C. キャッチコピー & 検索窓 -->
-            <section class="mb-6">
-                <h2 class="text-3xl font-extrabold mb-4 text-white">
-                    <span class="accent-cyan">Unlock</span> J-Artist Fan Life.
-                </h2>
-                <!-- 検索窓 -->
-                <div class="relative mb-6">
-                    <input type="search" placeholder="Search Artists, Genres, or Venues (Live Houses)"
-                           class="w-full p-3 pl-10 rounded-xl bg-gray-800 text-white placeholder-gray-500 border border-cyan-500 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500">
-                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400"></i>
-                </div>
-
-                <!-- D. カテゴリータグ (検索窓の直下) -->
-                <div class="flex flex-wrap">
-                    <a href="#" class="px-3 py-1 mr-2 mb-2 text-xs font-semibold rounded-full tag-accent shadow-md hover:bg-opacity-80 transition-opacity">#AnimeRelated</a>
-                    <a href="#" class="px-3 py-1 mr-2 mb-2 text-xs font-semibold rounded-full tag-accent shadow-md hover:bg-opacity-80 transition-opacity">#LiveHouseVibe</a>
-                    <a href="#" class="px-3 py-1 mr-2 mb-2 text-xs font-semibold rounded-full tag-accent shadow-md hover:bg-opacity-80 transition-opacity">#FemaleVocal</a>
-                    <a href="#" class="px-3 py-1 mr-2 mb-2 text-xs font-semibold rounded-full tag-accent shadow-md hover:bg-opacity-80 transition-opacity">#CityPop</a>
-                </div>
-            </section>
-
-            <!-- E. アーティスト一覧セクション (横スクロールのスライダー) -->
-            <!-- 改行（スペース）を追加するためにpt-8 (padding-top) を追加 -->
-            <section class="mb-8 pt-8 border-t border-gray-800"> 
-                <h3 class="text-2xl font-bold mb-4 text-white">Featured Artists</h3>
-                
-                <!-- スライダーコンテナ -->
-                <div class="flex overflow-x-scroll space-x-4 no-scrollbar pb-4 -mx-4 px-4">
-                    
-                    <!-- アーティストカード 1 (The Major Star) -->
-                    <a href="artist_guide.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
-                        <img src="https://placehold.co/400x400/333333/ffffff?text=Major+Star" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
-                        <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
-                            <h4 class="text-lg font-extrabold text-white leading-tight">THE MAJOR STAR</h4>
-                        </div>
-                    </a>
-
-                    <!-- アーティストカード 2 (Underground Hero) -->
-                    <a href="artist_guide.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
-                        <img src="https://placehold.co/400x400/333333/ffffff?text=Underground+Hero" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
-                        <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
-                            <h4 class="text-lg font-extrabold text-white leading-tight">UNDERGROUND HERO</h4>
-                        </div>
-                    </a>
-                    
-                    <!-- アーティストカード 3 (CityPop Legend) -->
-                    <a href="artist_guide.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
-                        <img src="https://placehold.co/400x400/333333/ffffff?text=CityPop+Legend" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
-                        <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
-                            <h4 class="text-lg font-extrabold text-white leading-tight">CITYPOP LEGEND</h4>
-                        </div>
-                    </a>
-
-                    <!-- アーティストカード 4 (Placeholder) -->
-                    <a href="artist_guide.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
-                        <img src="https://placehold.co/400x400/333333/ffffff?text=Anime+Vocalist" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
-                        <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
-                            <h4 class="text-lg font-extrabold text-white leading-tight">ANIME VOCALIST</h4>
-                        </div>
-                    </a>
-
-                    <!-- アーティストカード 5 (Placeholder) -->
-                    <a href="artist_guide.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
-                        <img src="https://placehold.co/400x400/333333/ffffff?text=Indie+Girl+Band" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
-                        <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
-                            <h4 class="text-lg font-extrabold text-white leading-tight">INDIE GIRL BAND</h4>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- 回遊促進 -->
-                <a href="#" class="block text-center mt-6 text-sm accent-cyan hover:underline">
-                    View All Artists <i class="fas fa-arrow-right ml-1"></i>
-                </a>
-            </section>
-
-            <!-- F. フッター (ロゴ、SNS、広告) -->
-            <footer class="p-4 text-center text-gray-500 text-sm border-t border-gray-800">
-                <p class="mb-2">© J-VIBE.guide 2024</p>
-                <div class="text-2xl space-x-4 mb-4">
-                    <a href="#" class="hover:text-cyan-400"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="hover:text-cyan-400"><i class="fab fa-instagram"></i></a>
-                </div>
-                <div class="p-4 bg-gray-700/50 rounded-lg text-xs">
-                    [AD Space: Ticket Partner Banner]
-                </div>
-            </footer>
-
-        </main>
-
+    </header>
+    
+    <!-- B. ヒーロー画像 (トップのビジュアル) -->
+    <div class="w-full">
+        <!-- 高さをh-56からh-32に変更 -->
+        <img src="https://placehold.co/600x256/111111/ffffff?text=Japanese+Live+Music+Scene" alt="Japanese Live Music Scene Hero Image" 
+             class="w-full h-32 object-cover opacity-70">
     </div>
 
-</body>
-</html>
+    <main class="p-4">
+        
+        <!-- C. キャッチコピー & 検索窓 -->
+        <section class="mb-6">
+            <h2 class="text-3xl font-extrabold mb-4 text-white">
+                <span class="accent-cyan">Unlock</span> J-Artist Fan Life.
+            </h2>
+            <!-- 検索窓 -->
+            <div class="relative mb-6">
+                <input type="search" placeholder="Search Artists, Genres, or Venues (Live Houses)"
+                       class="w-full p-3 pl-10 rounded-xl bg-gray-800 text-white placeholder-gray-500 border border-cyan-500 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500">
+                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400"></i>
+            </div>
+
+            <!-- D. カテゴリータグ (検索窓の直下) -->
+            <div class="flex flex-wrap">
+                <a href="#" class="px-3 py-1 mr-2 mb-2 text-xs font-semibold rounded-full tag-accent shadow-md hover:bg-opacity-80 transition-opacity">#AnimeRelated</a>
+                <a href="#" class="px-3 py-1 mr-2 mb-2 text-xs font-semibold rounded-full tag-accent shadow-md hover:bg-opacity-80 transition-opacity">#LiveHouseVibe</a>
+                <a href="#" class="px-3 py-1 mr-2 mb-2 text-xs font-semibold rounded-full tag-accent shadow-md hover:bg-opacity-80 transition-opacity">#FemaleVocal</a>
+                <a href="#" class="px-3 py-1 mr-2 mb-2 text-xs font-semibold rounded-full tag-accent shadow-md hover:bg-opacity-80 transition-opacity">#CityPop</a>
+            </div>
+        </section>
+
+        <!-- E. アーティスト一覧セクション (横スクロールのスライダー) -->
+        <section class="mb-8 pt-8 border-t border-gray-800"> 
+            <h3 class="text-2xl font-bold mb-4 text-white">Featured Artists</h3>
+            
+            <!-- スライダーコンテナ -->
+            <div class="flex overflow-x-scroll space-x-4 no-scrollbar pb-4 -mx-4 px-4">
+                
+                <!-- アーティストカード 1 (The Major Star) -->
+                <a href="major-star.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
+                    <img src="https://placehold.co/400x400/333333/ffffff?text=Major+Star" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
+                    <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
+                        <h4 class="text-lg font-extrabold text-white leading-tight">THE MAJOR STAR</h4>
+                    </div>
+                </a>
+
+                <!-- アーティストカード 2 (Underground Hero) -->
+                <a href="artist_guide.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
+                    <img src="https://placehold.co/400x400/333333/ffffff?text=Underground+Hero" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
+                    <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
+                        <h4 class="text-lg font-extrabold text-white leading-tight">UNDERGROUND HERO</h4>
+                    </div>
+                </a>
+                
+                <!-- アーティストカード 3 (CityPop Legend) -->
+                <a href="artist_guide.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
+                    <img src="https://placehold.co/400x400/333333/ffffff?text=CityPop+Legend" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
+                    <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
+                        <h4 class="text-lg font-extrabold text-white leading-tight">CITYPOP LEGEND</h4>
+                    </div>
+                </a>
+
+                <!-- アーティストカード 4 (Placeholder) -->
+                <a href="artist_guide.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
+                    <img src="https://placehold.co/400x400/333333/ffffff?text=Anime+Vocalist" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
+                    <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
+                        <h4 class="text-lg font-extrabold text-white leading-tight">ANIME VOCALIST</h4>
+                    </div>
+                </a>
+
+                <!-- アーティストカード 5 (Placeholder) -->
+                <a href="artist_guide.html" class="flex-shrink-0 w-40 h-40 relative rounded-xl overflow-hidden artist-card-slider">
+                    <img src="https://placehold.co/400x400/333333/ffffff?text=Indie+Girl+Band" alt="Artist Image Placeholder" class="absolute inset-0 w-full h-full object-cover opacity-70">
+                    <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-[#1a1a2e] to-transparent">
+                        <h4 class="text-lg font-extrabold text-white leading-tight">INDIE GIRL BAND</h4>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 回遊促進 -->
+            <a href="#" class="block text-center mt-6 text-sm accent-cyan hover:underline">
+                View All Artists <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </section>
+
+        <!-- F. フッター (ロゴ、SNS、広告) -->
+        <footer class="p-4 text-center text-gray-500 text-sm border-t border-gray-800">
+            <p class="mb-2">© J-VIBE.guide 2024</p>
+            <div class="text-2xl space-x-4 mb-4">
+                <a href="#" class="hover:text-cyan-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-cyan-400"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="p-4 bg-gray-700/50 rounded-lg text-xs">
+                [AD Space: Ticket Partner Banner]
+            </div>
+        </footer>
+
+    </main>
+
+</div>
