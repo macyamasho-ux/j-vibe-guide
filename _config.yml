@@ -25,3 +25,9 @@ permalink: pretty
 # Custom Variables (Optional, but good practice)
 version: 1.0.0
 main_color: "#00e0e0"
+
+# --- カスタムコレクション設定 ---
+collections:
+  artists:
+    output: true # 個別ページを出力する
+    permalink: /artists/:name/ # URL構造を定義（例: /artists/major-star/）
