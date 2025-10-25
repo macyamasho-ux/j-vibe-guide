@@ -1,26 +1,18 @@
 # Jekyll Configuration for J-VIBE.guide
-# Minimal setup for GitHub Pages (no Gems)
 
 # Site Settings
 title: J-VIBE.guide
 email: your-email@example.com
 description: >-
   Unlock J-Artist Fan Life. Your essential guide to finding and connecting with J-Artists across Asia.
-baseurl: "" 
-url: "https://yourusername.github.io" 
+baseurl: "/j-vibe-guide"  # 🚨 修正: プロジェクトのサブディレクトリを明記
+url: "https://macyamasho-ux.github.io" # 🚨 修正: 正しいホスト名を設定 
 
 # Build settings
 markdown: kramdown
-# permalink: pretty # クリーンURLの強制はコメントアウト/削除し、標準動作させます
 
 # --- カスタムコレクション設定 ---
 collections:
   artists:
     output: true
-# (新規追加) ルートにある多言語ファイルをページとして認識させる
-defaults:
-  - scope:
-      path: "" # ルートディレクトリ全体
-      type: "pages"
-    values:
-      layout: "default"
+# permalinkの行は削除したまま（標準動作）
