@@ -1,0 +1,27 @@
+# Jekyll Configuration for J-VIBE.guide
+# Minimal setup for GitHub Pages (no Gems)
+
+# Site Settings
+title: J-VIBE.guide
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Unlock J-Artist Fan Life. Your essential guide to finding and connecting with J-Artists across Asia.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourusername.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+# Theme is not specified to keep it minimalist and control all HTML/CSS
+# Exclusions
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+
+# Permalinks (Clean URLs)
+permalink: pretty
+
+# Custom Variables (Optional, but good practice)
+version: 1.0.0
+main_color: "#00e0e0"
