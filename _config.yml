@@ -17,4 +17,10 @@ markdown: kramdown
 collections:
   artists:
     output: true
-# permalink: /artists/:name.html # コレクション内のpermalinkも削除し、標準の /<collection>/<filename>.html 形式で出力させます
+# (新規追加) ルートにある多言語ファイルをページとして認識させる
+defaults:
+  - scope:
+      path: "" # ルートディレクトリ全体
+      type: "pages"
+    values:
+      layout: "default"
