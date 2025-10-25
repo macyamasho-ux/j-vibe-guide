@@ -5,14 +5,9 @@ title: J-VIBE.guide
 email: your-email@example.com
 description: >-
   Unlock J-Artist Fan Life. Your essential guide to finding and connecting with J-Artists across Asia.
-baseurl: "/j-vibe-guide"  # 🚨 修正: プロジェクトのサブディレクトリを明記
-url: "https://macyamasho-ux.github.io" # 🚨 修正: 正しいホスト名を設定 
+baseurl: ""  # 🚨 修正: 空の文字列に戻します
+url: "https://macyamasho-ux.github.io" # この行は維持
 
 # Build settings
 markdown: kramdown
-
-# --- カスタムコレクション設定 ---
-collections:
-  artists:
-    output: true
-# permalinkの行は削除したまま（標準動作）
+# コレクション設定もすべて削除
