@@ -1,0 +1,75 @@
+---
+layout: default
+title: 首頁
+---
+
+<section class="hero text-center py-10 md:py-16 bg-white">
+    <div class="h-40 bg-gray-200 mb-6 rounded-lg overflow-hidden flex items-center justify-center relative">
+        <img src="https://via.placeholder.com/1000x300/e0ffff/000000?text=J-Artist+Live+Scene+Image" alt="Live Concert" class="w-full h-full object-cover opacity-80">
+        <div class="absolute inset-0 bg-black/10"></div>
+    </div>
+
+    <h1 class="text-4xl font-extrabold mb-3 text-gray-900">
+        解鎖您的<span class="text-deep-cyan">J-藝人</span>追星生活。
+    </h1>
+    <p class="text-gray-600 mb-6 max-w-lg mx-auto">尋找、聯繫並享受日本藝人的必備指南。</p>
+
+    <form class="mb-8 max-w-md mx-auto">
+        <div class="flex items-center border-2 border-gray-200 rounded-full overflow-hidden focus-within:border-deep-cyan transition duration-200">
+            <input type="search" placeholder="搜尋藝人或類型" class="w-full p-3 text-gray-700 outline-none">
+            <button type="submit" class="bg-deep-cyan hover:bg-deep-cyan-dark p-3 text-white transition duration-150">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+        </div>
+    </form>
+    
+    <div class="flex flex-wrap justify-center space-x-2 mb-8">
+        <a href="#" class="text-sm bg-gray-100 text-gray-700 py-1 px-3 rounded-full hover:bg-deep-cyan hover:text-white transition duration-150 mt-2">#AnimeRelated</a>
+        <a href="#" class="text-sm bg-gray-100 text-gray-700 py-1 px-3 rounded-full hover:bg-deep-cyan hover:text-white transition duration-150 mt-2">#J-POP</a>
+        <a href="#" class="text-sm bg-gray-100 text-gray-700 py-1 px-3 rounded-full hover:bg-deep-cyan hover:text-white transition duration-150 mt-2">#RockBand</a>
+        <a href="#" class="text-sm bg-gray-100 text-gray-700 py-1 px-3 rounded-full hover:bg-deep-cyan hover:text-white transition duration-150 mt-2">#FemaleVocal</a>
+    </div>
+</section>
+
+<section class="mb-10">
+    <h2 class="text-2xl font-bold mb-4 border-l-4 border-deep-cyan pl-2">特色藝人</h2>
+    
+    <div class="flex space-x-6 overflow-x-auto pb-4 featured-scroll">
+        
+        <a href="{{ site.baseurl }}/major-star.html" class="w-36 flex-shrink-0 text-center group">
+            <img src="https://via.placeholder.com/150/00e0e0/000000?text=STAR1" alt="Major Star" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
+            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">主要明星</h3>
+        </a>
+        
+        <a href="#" class="w-36 flex-shrink-0 text-center group">
+            <img src="https://via.placeholder.com/150/e0e000/000000?text=STAR2" alt="Artist Name 2" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
+            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">藝人名稱 2</h3>
+        </a>
+        
+        <a href="#" class="w-36 flex-shrink-0 text-center group">
+            <img src="https://via.placeholder.com/150/e000e0/000000?text=STAR3" alt="Artist Name 3" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
+            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">藝人名稱 3</h3>
+        </a>
+        
+        </div>
+</section>
+
+<section class="mb-10">
+    <h2 class="text-2xl font-bold mb-4 border-l-4 border-deep-cyan pl-2">粉絲生活必備指南</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="#" class="p-4 border rounded-lg hover:border-deep-cyan transition duration-150">
+            <h3 class="font-semibold text-lg text-deep-cyan">購票指南</h3>
+            <p class="text-sm text-gray-600">非日本居民的權威指南。</p>
+        </a>
+        <a href="#" class="p-4 border rounded-lg hover:border-deep-cyan transition duration-150">
+            <h3 class="font-semibold text-lg text-deep-cyan">粉絲俱樂部註冊</h3>
+            <p class="text-sm text-gray-600">如何從海外加入粉絲俱樂部。</p>
+        </a>
+        <a href="#" class="p-4 border rounded-lg hover:border-deep-cyan transition duration-150">
+            <h3 class="font-semibold text-lg text-deep-cyan">官方商品</h3>
+            <p class="text-sm text-gray-600">購買官方商品和運送資訊。</p>
+        </a>
+    </div>
+</section>
