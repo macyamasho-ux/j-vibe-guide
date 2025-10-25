@@ -4,30 +4,17 @@
 # Site Settings
 title: J-VIBE.guide
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Unlock J-Artist Fan Life. Your essential guide to finding and connecting with J-Artists across Asia.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yourusername.github.io" # the base hostname & protocol for your site
+baseurl: "" 
+url: "https://yourusername.github.io" 
 
 # Build settings
 markdown: kramdown
-# Theme is not specified to keep it minimalist and control all HTML/CSS
-# Exclusions
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor/
-
-# Permalinks (Clean URLs)
-permalink: pretty
-
-# Custom Variables (Optional, but good practice)
-version: 1.0.0
-main_color: "#00e0e0"
+# permalink: pretty # クリーンURLの強制はコメントアウト/削除し、標準動作させます
 
 # --- カスタムコレクション設定 ---
 collections:
   artists:
-    output: true # 個別ページを出力する
-    permalink: /artists/:name/ # URL構造を定義（例: /artists/major-star/）
+    output: true
+# permalink: /artists/:name.html # コレクション内のpermalinkも削除し、標準の /<collection>/<filename>.html 形式で出力させます
