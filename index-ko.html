@@ -3,83 +3,10 @@ layout: default
 title: 홈
 ---
 
-<section class="hero text-center py-10 md:py-16 bg-white">
-    <div class="h-40 bg-gray-200 mb-6 rounded-lg overflow-hidden flex items-center justify-center relative">
-        <img src="https://via.placeholder.com/1000x300/e0ffff/000000?text=J-Artist+Live+Scene+Image" alt="Live Concert" class="w-full h-full object-cover opacity-80">
-        <div class="absolute inset-0 bg-black/10"></div>
-    </div>
-
-    <h1 class="text-4xl font-extrabold mb-3 text-gray-900">
-        <span class="text-deep-cyan">J-아티스트</span> 팬 라이프를 펼치다.
-    </h1>
-    <p class="text-gray-600 mb-6 max-w-lg mx-auto">일본 아티스트를 찾고, 연결하며, 즐기는 데 필수적인 가이드입니다.</p>
-
-    <form class="mb-8 max-w-md mx-auto">
-        <div class="flex items-center border-2 border-gray-200 rounded-full overflow-hidden focus-within:border-deep-cyan transition duration-200">
-            <input type="search" placeholder="아티스트 또는 장르 검색" class="w-full p-3 text-gray-700 outline-none">
-            <button type="submit" class="bg-deep-cyan hover:bg-deep-cyan-dark p-3 text-white transition duration-150">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-            </button>
-        </div>
-    </form>
-    
-    <div class="flex flex-wrap justify-center space-x-2 mb-8">
-        <a href="#" class="text-sm bg-gray-100 text-gray-700 py-1 px-3 rounded-full hover:bg-deep-cyan hover:text-white transition duration-150 mt-2">#AnimeRelated</a>
-        <a href="#" class="text-sm bg-gray-100 text-gray-700 py-1 px-3 rounded-full hover:bg-deep-cyan hover:text-white transition duration-150 mt-2">#J-POP</a>
-        <a href="#" class="text-sm bg-gray-100 text-gray-700 py-1 px-3 rounded-full hover:bg-deep-cyan hover:text-white transition duration-150 mt-2">#RockBand</a>
-        <a href="#" class="text-sm bg-gray-100 text-gray-700 py-1 px-3 rounded-full hover:bg-deep-cyan hover:text-white transition duration-150 mt-2">#FemaleVocal</a>
-    </div>
-</section>
-
-<section class="mb-10">
-    <h2 class="text-2xl font-bold mb-4 border-l-4 border-deep-cyan pl-2">추천 아티스트</h2>
-    
-    <div class="flex space-x-6 overflow-x-auto pb-4 featured-scroll">
-        
-        <a href="{{ site.baseurl }}/artists/major-star/" class="w-36 flex-shrink-0 text-center group">
-            <img src="https://via.placeholder.com/150/00e0e0/000000?text=STAR1" alt="Major Star" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
-            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">메이저 스타</h3>
-        </a>
-        
-        <a href="{{ site.baseurl }}/artists/major-star-2/" class="w-36 flex-shrink-0 text-center group">
-            <img src="https://via.placeholder.com/150/ff4500/FFFFFF?text=ROCK" alt="Neon Genesis Rockers" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
-            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">네온 제네시스 락커스</h3>
-        </a>
-        
-        <a href="{{ site.baseurl }}/artists/major-star-3/" class="w-36 flex-shrink-0 text-center group">
-            <img src="https://via.placeholder.com/150/8a2be2/FFFFFF?text=SYNTH" alt="Future Synth Diva" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
-            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">퓨처 신스 디바</h3>
-        </a>
-        
-        <a href="{{ site.baseurl }}/artists/major-star-4/" class="w-36 flex-shrink-0 text-center group">
-            <img src="https://via.placeholder.com/150/20b2aa/FFFFFF?text=JAZZ" alt="The Jazz Travelers" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
-            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">더 재즈 트래블러즈</h3>
-        </a>
-
-        <a href="{{ site.baseurl }}/artists/major-star-5/" class="w-36 flex-shrink-0 text-center group">
-            <img src="https://via.placeholder.com/150/ff69b4/FFFFFF?text=IDOL" alt="Pop Heart Idol" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
-            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">팝 하트 아이돌</h3>
-        </a>
-
-        <a href="{{ site.baseurl }}/artists/minor-star-1/" class="w-36 flex-shrink-0 text-center group">
-            <img src="https://via.placeholder.com/150/ffa07a/000000?text=LOFI" alt="Chilled Lo-fi Beats" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
-            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">칠 로파이 비츠</h3>
-        </a>
-        
-        <a href="{{ site.baseurl }}/artists/minor-star-2/" class="w-36 flex-shrink-0 text-center group">
-            <img src="https://via.placeholder.com/150/9370db/FFFFFF?text=FOLK" alt="Kyoto Folk Duo" class="w-36 h-36 rounded-lg mx-auto mb-2 object-cover border-2 border-transparent group-hover:border-deep-cyan transition duration-150 shadow-md">
-            <h3 class="text-base font-semibold text-gray-900 group-hover:text-deep-cyan">교토 포크 듀오</h3>
-        </a>
-        
-    </div>
-</section>
-
 <section class="mb-10">
     <h2 class="text-2xl font-bold mb-4 border-l-4 border-deep-cyan pl-2">팬 라이프 필수 가이드</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <a href="{{ site.baseurl }}/guide-ticket-purchase.html" class="p-4 border rounded-lg hover:border-deep-cyan transition duration-150">
+        <a href="/guide-ticket-purchase.html" class="p-4 border rounded-lg hover:border-deep-cyan transition duration-150">
             <h3 class="font-semibold text-lg text-deep-cyan">티켓 구매</h3>
             <p class="text-sm text-gray-600">비거주 외국인을 위한 최종 가이드.</p>
         </a>
