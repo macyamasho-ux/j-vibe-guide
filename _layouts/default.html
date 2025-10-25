@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Tailwind Configuration (for theme color) */
+        /* Deep Cyan: #00e0e0 */
+        .text-deep-cyan { color: #00e0e0; }
+        .bg-deep-cyan { background-color: #00e0e0; }
+        .border-deep-cyan { border-color: #00e0e0; }
+        .hover\:bg-deep-cyan-dark:hover { background-color: #00b0b0; }
+        .hover\:text-deep-cyan:hover { color: #00e0e0; }
+
+        /* Custom Scrollbar for Featured Artists (Mobile focus) */
+        .featured-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .featured-scroll::-webkit-scrollbar-thumb {
+            background-color: #00e0e0;
+            border-radius: 3px;
+        }
+        .featured-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <header class="sticky top-0 bg-white border-b border-gray-100 p-4 z-10 shadow-sm">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <a href="{{ site.baseurl }}/" class="text-2xl font-bold flex items-center">
+                <span class="text-deep-cyan">J-VIBE</span>.guide
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-1 text-deep-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a.5.5 0 010 .707l-4.5 4.5a.5.5 0 01-.707 0l-1.5-1.5a.5.5 0 01.707-.707l1.146 1.147 4.146-4.146a.5.5 0 01.707 0zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 12a9 9 0 019 9H3a9 9 0 019-9z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 12h.01M12 7a.5.5 0 110-1 .5.5 0 010 1z" />
+                </svg>
+                </a>
+            <div class="language-selector">
+                <button class="text-gray-500 hover:text-deep-cyan text-sm">EN ▼</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-4 md:p-6">
+        {{ content }}
+    </main>
+
+    <footer class="text-center py-6 border-t border-gray-100 mt-10 text-gray-500 text-sm">
+        <p>&copy; 2024 J-VIBE.guide. All rights reserved.</p>
+        <div class="mt-2 space-x-4">
+            <a href="#" class="hover:text-deep-cyan">Privacy Policy</a>
+            <a href="#" class="hover:text-deep-cyan">Terms of Use</a>
+        </div>
+    </footer>
+
+</body>
+</html>
